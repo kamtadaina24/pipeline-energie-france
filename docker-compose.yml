@@ -1,0 +1,15 @@
+services:
+  s3:
+    image: chrislusf/seaweedfs:latest
+    container_name: s3-local
+    command: server -s3 -dir=/data
+    ports:
+      - "8333:8333"   # API S3 (utilisée par le code Python)
+    environment:
+      AWS_ACCESS_KEY_ID: minioadmin
+      AWS_SECRET_ACCESS_KEY: minioadmin123
+    volumes:
+      - s3_data:/data
+
+volumes:
+  s3_data:

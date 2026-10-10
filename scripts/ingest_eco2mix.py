@@ -6,6 +6,9 @@ import boto3
 import requests
 from botocore.exceptions import ClientError
 
+import argparse
+import time
+
 DATASET = "eco2mix-national-tr"
 URL = f"https://odre.opendatasoft.com/api/explore/v2.1/catalog/datasets/{DATASET}/records"
 BUCKET = "raw"
@@ -55,10 +58,40 @@ def upload_raw(s3, jour, donnees):
     return key
 
 
+# if __name__ == "__main__":
+#     jour = date.today() - timedelta(days=1)
+#     s3 = get_s3_client()
+#     ensure_bucket(s3)
+#     donnees = fetch_day(jour)
+#     key = upload_raw(s3, jour, donnees)
+#     print(f"{len(donnees['results'])} lignes -> s3://{BUCKET}/{key}")
+
+
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(description="Ingestion eCO2mix vers S3")
+    parser.add_argument("--start", type=date.fromisoformat, help="Premier jour (AAAA-MM-JJ)")
+    parser.add_argument("--end", type=date.fromisoformat, help="Dernier jour inclus (AAAA-MM-JJ)")
+    return parser.parse_args()
+
+
 if __name__ == "__main__":
-    jour = date.today() - timedelta(days=1)
+    args = parse_args()
+    hier = date.today() - timedelta(days=1)
+    debut = args.start or hier
+    fin = args.end or debut
+
+    if fin < debut:
+        raise SystemExit("--end doit etre posterieur ou egal a --start")
+
     s3 = get_s3_client()
     ensure_bucket(s3)
-    donnees = fetch_day(jour)
-    key = upload_raw(s3, jour, donnees)
-    print(f"{len(donnees['results'])} lignes -> s3://{BUCKET}/{key}")
+
+    jour = debut
+    while jour <= fin:
+        donnees = fetch_day(jour)
+        key = upload_raw(s3, jour, donnees)
+        print(f"{len(donnees['results'])} lignes -> s3://{BUCKET}/{key}")
+        jour += timedelta(days=1)
+        time.sleep(1)

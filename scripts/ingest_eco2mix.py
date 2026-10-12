@@ -1,6 +1,7 @@
 import json
 import os
 from datetime import date, timedelta
+from s3_utils import get_s3_client, ensure_bucket, BUCKET
 
 import boto3
 import requests
@@ -11,29 +12,10 @@ import time
 
 DATASET = "eco2mix-national-tr"
 URL = f"https://odre.opendatasoft.com/api/explore/v2.1/catalog/datasets/{DATASET}/records"
-BUCKET = "raw"
 
 
-def get_s3_client():
-    """Les valeurs par defaut visent le S3 local ; sur AWS on definit les variables."""
-    return boto3.client(
-        "s3",
-        endpoint_url=os.getenv("S3_ENDPOINT", "http://localhost:8333"),
-        aws_access_key_id=os.getenv("S3_ACCESS_KEY", "minioadmin"),
-        aws_secret_access_key=os.getenv("S3_SECRET_KEY", "minioadmin123"),
-        region_name="us-east-1",
-    )
 
-
-def ensure_bucket(s3):
-    try:
-        s3.create_bucket(Bucket=BUCKET)
-    except ClientError as e:
-        if e.response["Error"]["Code"] not in ("BucketAlreadyOwnedByYou", "BucketAlreadyExists"):
-            raise
-
-
-def fetch_day(jour):
+def fetch_city_day(jour):
     params = {
         "where": f"date_heure >= date'{jour}' AND date_heure < date'{jour + timedelta(days=1)}'",
         "order_by": "date_heure",

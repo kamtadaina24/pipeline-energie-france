@@ -1,0 +1,4 @@
+name: energie
+version: "1.0.0"
+profile: energie
+model-paths: ["models"]

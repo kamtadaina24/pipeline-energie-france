@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_eco2mix
+    columns:
+      - name: date_heure_utc
+        data_tests:
+          - unique
+          - not_null
+      - name: consommation_mw
+        data_tests:
+          - not_null

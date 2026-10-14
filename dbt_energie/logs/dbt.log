@@ -54,3 +54,462 @@
 [0m04:33:39.512616 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001949CE0D940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001949A0FAC30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001949CB62360>]}
 [0m04:33:39.512881 [debug] [MainThread]: Flushing usage events
 [0m04:33:40.101637 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m05:06:25.719693 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F7CC4E2270>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F7CA220E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F7CEFDB890>]}
+
+
+============================== 05:06:25.724188 | accba486-285d-4439-9301-6022e9285b96 ==============================
+[0m05:06:25.724188 [info ] [MainThread]: Running with dbt=1.12.5
+[0m05:06:25.724934 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\ROG\\.dbt', 'invocation_command': 'dbt run', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'C:\\Users\\ROG\\Documents\\projet_daina\\pipeline-energie-france-cld\\dbt_energie\\logs'}
+[0m05:06:25.894882 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'accba486-285d-4439-9301-6022e9285b96', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F7CF174B00>]}
+[0m05:06:25.947189 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'accba486-285d-4439-9301-6022e9285b96', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F7CD2CC6B0>]}
+[0m05:06:25.948620 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m05:06:26.147404 [debug] [MainThread]: checksum: f8f8a5b835821750c5569d0fd57ecab7fd32ea882f8b92522a1eed2604ed9ee8, vars: {}, profile: energie, target: dev, version: 1.12.5
+[0m05:06:26.148292 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m05:06:26.148678 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'accba486-285d-4439-9301-6022e9285b96', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F7CF183050>]}
+[0m05:06:29.317060 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'accba486-285d-4439-9301-6022e9285b96', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F7CFA054F0>]}
+[0m05:06:29.454603 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ROG\Documents\projet_daina\pipeline-energie-france-cld\dbt_energie\target\manifest.json
+[0m05:06:29.459991 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ROG\Documents\projet_daina\pipeline-energie-france-cld\dbt_energie\target\semantic_manifest.json
+[0m05:06:29.495203 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\ROG\Documents\projet_daina\pipeline-energie-france-cld\dbt_energie\target\osi_document.json
+[0m05:06:29.520690 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'accba486-285d-4439-9301-6022e9285b96', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F7CFC99C50>]}
+[0m05:06:29.521324 [info ] [MainThread]: Found 1 model, 3 data tests, 2 sources, 477 macros
+[0m05:06:29.521882 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'accba486-285d-4439-9301-6022e9285b96', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F7CFCBB1E0>]}
+[0m05:06:29.524664 [info ] [MainThread]: 
+[0m05:06:29.525284 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m05:06:29.525812 [info ] [MainThread]: 
+[0m05:06:29.526632 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m05:06:29.528036 [debug] [ThreadPool]: Acquiring new postgres connection 'list_energie'
+[0m05:06:29.632171 [debug] [ThreadPool]: Using postgres connection "list_energie"
+[0m05:06:29.632784 [debug] [ThreadPool]: On list_energie: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "energie", "target_name": "dev", "connection_name": "list_energie"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m05:06:29.633300 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m05:06:29.675242 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.042 seconds
+[0m05:06:29.676929 [debug] [ThreadPool]: On list_energie: Close
+[0m05:06:29.677882 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_energie, now create_energie_analytics)
+[0m05:06:29.678437 [debug] [ThreadPool]: Creating schema "database: "energie"
+schema: "analytics"
+"
+[0m05:06:29.683087 [debug] [ThreadPool]: Using postgres connection "create_energie_analytics"
+[0m05:06:29.683436 [debug] [ThreadPool]: On create_energie_analytics: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "energie", "target_name": "dev", "connection_name": "create_energie_analytics"} */
+create schema if not exists "analytics"
+[0m05:06:29.683704 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m05:06:29.700632 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.017 seconds
+[0m05:06:29.701761 [debug] [ThreadPool]: On create_energie_analytics: COMMIT
+[0m05:06:29.702137 [debug] [ThreadPool]: Using postgres connection "create_energie_analytics"
+[0m05:06:29.702417 [debug] [ThreadPool]: On create_energie_analytics: COMMIT
+[0m05:06:29.705488 [debug] [ThreadPool]: SQL status: COMMIT in 0.003 seconds
+[0m05:06:29.705937 [debug] [ThreadPool]: On create_energie_analytics: Close
+[0m05:06:29.707764 [debug] [ThreadPool]: Acquiring new postgres connection 'list_energie_analytics'
+[0m05:06:29.714825 [debug] [ThreadPool]: Using postgres connection "list_energie_analytics"
+[0m05:06:29.715368 [debug] [ThreadPool]: On list_energie_analytics: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "energie", "target_name": "dev", "connection_name": "list_energie_analytics"} */
+select
+      'energie' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'energie' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'energie' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+    union all
+    select distinct
+     'energie' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'analytics'
+  
+[0m05:06:29.715812 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m05:06:29.751887 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.036 seconds
+[0m05:06:29.753538 [debug] [ThreadPool]: On list_energie_analytics: ROLLBACK
+[0m05:06:29.754550 [debug] [ThreadPool]: On list_energie_analytics: Close
+[0m05:06:29.758104 [debug] [MainThread]: Using postgres connection "master"
+[0m05:06:29.758491 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "energie", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m05:06:29.758839 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m05:06:29.784160 [debug] [MainThread]: SQL status: SELECT 0 in 0.025 seconds
+[0m05:06:29.785175 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'accba486-285d-4439-9301-6022e9285b96', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F7CFEED250>]}
+[0m05:06:29.785546 [debug] [MainThread]: On master: ROLLBACK
+[0m05:06:29.786629 [debug] [MainThread]: On master: COMMIT
+[0m05:06:29.786931 [debug] [MainThread]: Using postgres connection "master"
+[0m05:06:29.787176 [debug] [MainThread]: On master: COMMIT
+[0m05:06:29.788335 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m05:06:29.788612 [debug] [MainThread]: On master: Close
+[0m05:06:29.815011 [debug] [Thread-1 (]: Began running node model.energie.stg_eco2mix
+[0m05:06:29.815764 [info ] [Thread-1 (]: 1 of 1 START sql view model analytics.stg_eco2mix .............................. [RUN]
+[0m05:06:29.816566 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.energie.stg_eco2mix'
+[0m05:06:29.817020 [debug] [Thread-1 (]: Began compiling node model.energie.stg_eco2mix
+[0m05:06:29.824990 [debug] [Thread-1 (]: Writing injected SQL for node "model.energie.stg_eco2mix"
+[0m05:06:29.828397 [debug] [Thread-1 (]: Began executing node model.energie.stg_eco2mix
+[0m05:06:29.875471 [debug] [Thread-1 (]: Writing runtime sql for node "model.energie.stg_eco2mix"
+[0m05:06:29.878922 [debug] [Thread-1 (]: Using postgres connection "model.energie.stg_eco2mix"
+[0m05:06:29.879550 [debug] [Thread-1 (]: On model.energie.stg_eco2mix: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "energie", "target_name": "dev", "node_id": "model.energie.stg_eco2mix"} */
+
+  create view "energie"."analytics"."stg_eco2mix__dbt_tmp"
+    
+    
+  as (
+    select
+    (r->>'date_heure')::timestamptz   as date_heure_utc,
+    r->>'nature'                      as nature,
+    (r->>'consommation')::int         as consommation_mw,
+    (r->>'nucleaire')::int            as nucleaire_mw,
+    (r->>'eolien')::int               as eolien_mw,
+    (r->>'solaire')::int              as solaire_mw,
+    (r->>'hydraulique')::int          as hydraulique_mw,
+    (r->>'gaz')::int                  as gaz_mw,
+    (r->>'charbon')::int              as charbon_mw,
+    (r->>'fioul')::int                as fioul_mw,
+    (r->>'bioenergies')::int          as bioenergies_mw,
+    (r->>'taux_co2')::int             as taux_co2_g_kwh
+from "energie"."raw"."eco2mix_jour",
+     jsonb_array_elements(payload->'results') as r
+  );
+[0m05:06:29.880072 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m05:06:29.903615 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.023 seconds
+[0m05:06:29.911713 [debug] [Thread-1 (]: Using postgres connection "model.energie.stg_eco2mix"
+[0m05:06:29.912349 [debug] [Thread-1 (]: On model.energie.stg_eco2mix: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "energie", "target_name": "dev", "node_id": "model.energie.stg_eco2mix"} */
+alter table "energie"."analytics"."stg_eco2mix__dbt_tmp" rename to "stg_eco2mix"
+[0m05:06:29.914378 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m05:06:29.936325 [debug] [Thread-1 (]: On model.energie.stg_eco2mix: COMMIT
+[0m05:06:29.936855 [debug] [Thread-1 (]: Using postgres connection "model.energie.stg_eco2mix"
+[0m05:06:29.937183 [debug] [Thread-1 (]: On model.energie.stg_eco2mix: COMMIT
+[0m05:06:29.939232 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m05:06:29.944833 [debug] [Thread-1 (]: Applying DROP to: "energie"."analytics"."stg_eco2mix__dbt_backup"
+[0m05:06:29.950661 [debug] [Thread-1 (]: Using postgres connection "model.energie.stg_eco2mix"
+[0m05:06:29.951188 [debug] [Thread-1 (]: On model.energie.stg_eco2mix: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "energie", "target_name": "dev", "node_id": "model.energie.stg_eco2mix"} */
+drop view if exists "energie"."analytics"."stg_eco2mix__dbt_backup" cascade
+[0m05:06:29.952798 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.001 seconds
+[0m05:06:29.955389 [debug] [Thread-1 (]: On model.energie.stg_eco2mix: Close
+[0m05:06:29.957800 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'accba486-285d-4439-9301-6022e9285b96', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F7CCBCE570>]}
+[0m05:06:29.958543 [info ] [Thread-1 (]: 1 of 1 OK created sql view model analytics.stg_eco2mix ......................... [[32mCREATE VIEW[0m in 0.14s]
+[0m05:06:29.959370 [debug] [Thread-1 (]: Finished running node model.energie.stg_eco2mix
+[0m05:06:29.960987 [debug] [MainThread]: On master: COMMIT
+[0m05:06:29.961339 [debug] [MainThread]: Using postgres connection "master"
+[0m05:06:29.961611 [debug] [MainThread]: On master: COMMIT
+[0m05:06:29.961858 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m05:06:29.974277 [debug] [MainThread]: SQL status: COMMIT in 0.012 seconds
+[0m05:06:29.974634 [debug] [MainThread]: On master: Close
+[0m05:06:29.975093 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m05:06:29.975504 [debug] [MainThread]: Connection 'create_energie_analytics' was properly closed.
+[0m05:06:29.975849 [debug] [MainThread]: Connection 'list_energie_analytics' was properly closed.
+[0m05:06:29.976220 [debug] [MainThread]: Connection 'model.energie.stg_eco2mix' was properly closed.
+[0m05:06:29.976579 [info ] [MainThread]: 
+[0m05:06:29.977103 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.45 seconds (0.45s).
+[0m05:06:29.978158 [debug] [MainThread]: Command end result
+[0m05:06:30.021938 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ROG\Documents\projet_daina\pipeline-energie-france-cld\dbt_energie\target\manifest.json
+[0m05:06:30.027088 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ROG\Documents\projet_daina\pipeline-energie-france-cld\dbt_energie\target\semantic_manifest.json
+[0m05:06:30.032321 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\ROG\Documents\projet_daina\pipeline-energie-france-cld\dbt_energie\target\osi_document.json
+[0m05:06:30.042938 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ROG\Documents\projet_daina\pipeline-energie-france-cld\dbt_energie\target\run_results.json
+[0m05:06:30.043453 [info ] [MainThread]: 
+[0m05:06:30.044106 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m05:06:30.044615 [info ] [MainThread]: 
+[0m05:06:30.045126 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=1
+[0m05:06:30.046507 [debug] [MainThread]: Command `dbt run` succeeded at 05:06:30.046325 after 4.54 seconds
+[0m05:06:30.047108 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F7CFB60190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F7CFD1F140>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F7CF6CBF50>]}
+[0m05:06:30.047659 [debug] [MainThread]: Flushing usage events
+[0m05:06:30.830353 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m05:06:33.931524 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022910662270>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002290E390E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002291316F890>]}
+
+
+============================== 05:06:33.935165 | 123bdbe1-bbcb-4d03-b786-99237d558a94 ==============================
+[0m05:06:33.935165 [info ] [MainThread]: Running with dbt=1.12.5
+[0m05:06:33.935688 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'static_parser': 'True', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\ROG\\.dbt', 'invocation_command': 'dbt test', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'C:\\Users\\ROG\\Documents\\projet_daina\\pipeline-energie-france-cld\\dbt_energie\\logs'}
+[0m05:06:34.076781 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '123bdbe1-bbcb-4d03-b786-99237d558a94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022913304B00>]}
+[0m05:06:34.123000 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '123bdbe1-bbcb-4d03-b786-99237d558a94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002291145C6B0>]}
+[0m05:06:34.124331 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m05:06:34.296804 [debug] [MainThread]: checksum: f8f8a5b835821750c5569d0fd57ecab7fd32ea882f8b92522a1eed2604ed9ee8, vars: {}, profile: energie, target: dev, version: 1.12.5
+[0m05:06:34.466749 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m05:06:34.467248 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m05:06:34.467578 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m05:06:34.479164 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '123bdbe1-bbcb-4d03-b786-99237d558a94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022913896750>]}
+[0m05:06:34.670928 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ROG\Documents\projet_daina\pipeline-energie-france-cld\dbt_energie\target\manifest.json
+[0m05:06:34.676185 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ROG\Documents\projet_daina\pipeline-energie-france-cld\dbt_energie\target\semantic_manifest.json
+[0m05:06:34.711802 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\ROG\Documents\projet_daina\pipeline-energie-france-cld\dbt_energie\target\osi_document.json
+[0m05:06:34.758189 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '123bdbe1-bbcb-4d03-b786-99237d558a94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022913A58C80>]}
+[0m05:06:34.759247 [info ] [MainThread]: Found 1 model, 3 data tests, 2 sources, 477 macros
+[0m05:06:34.759919 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '123bdbe1-bbcb-4d03-b786-99237d558a94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022913AC2A50>]}
+[0m05:06:34.763342 [info ] [MainThread]: 
+[0m05:06:34.763992 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m05:06:34.764630 [info ] [MainThread]: 
+[0m05:06:34.765606 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m05:06:34.767139 [debug] [ThreadPool]: Acquiring new postgres connection 'list_energie_analytics'
+[0m05:06:34.876839 [debug] [ThreadPool]: Using postgres connection "list_energie_analytics"
+[0m05:06:34.877494 [debug] [ThreadPool]: On list_energie_analytics: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "energie", "target_name": "dev", "connection_name": "list_energie_analytics"} */
+select
+      'energie' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'energie' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'energie' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+    union all
+    select distinct
+     'energie' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'analytics'
+  
+[0m05:06:34.877822 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m05:06:34.903193 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.025 seconds
+[0m05:06:34.905052 [debug] [ThreadPool]: On list_energie_analytics: ROLLBACK
+[0m05:06:34.906270 [debug] [ThreadPool]: On list_energie_analytics: Close
+[0m05:06:34.910757 [debug] [MainThread]: Using postgres connection "master"
+[0m05:06:34.911399 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "energie", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m05:06:34.911968 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m05:06:34.931277 [debug] [MainThread]: SQL status: SELECT 1 in 0.019 seconds
+[0m05:06:34.933971 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '123bdbe1-bbcb-4d03-b786-99237d558a94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022913CFAA90>]}
+[0m05:06:34.935160 [debug] [MainThread]: On master: ROLLBACK
+[0m05:06:34.936502 [debug] [MainThread]: On master: COMMIT
+[0m05:06:34.937037 [debug] [MainThread]: Using postgres connection "master"
+[0m05:06:34.937507 [debug] [MainThread]: On master: COMMIT
+[0m05:06:34.939232 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m05:06:34.939940 [debug] [MainThread]: On master: Close
+[0m05:06:34.947678 [debug] [Thread-1 (]: Began running node test.energie.not_null_stg_eco2mix_consommation_mw.acf122576d
+[0m05:06:34.948325 [info ] [Thread-1 (]: 1 of 3 START test not_null_stg_eco2mix_consommation_mw ......................... [RUN]
+[0m05:06:34.949244 [debug] [Thread-1 (]: Acquiring new postgres connection 'test.energie.not_null_stg_eco2mix_consommation_mw.acf122576d'
+[0m05:06:34.949805 [debug] [Thread-1 (]: Began compiling node test.energie.not_null_stg_eco2mix_consommation_mw.acf122576d
+[0m05:06:34.973698 [debug] [Thread-1 (]: Writing injected SQL for node "test.energie.not_null_stg_eco2mix_consommation_mw.acf122576d"
+[0m05:06:34.975590 [debug] [Thread-1 (]: Began executing node test.energie.not_null_stg_eco2mix_consommation_mw.acf122576d
+[0m05:06:35.000382 [debug] [Thread-1 (]: Writing runtime sql for node "test.energie.not_null_stg_eco2mix_consommation_mw.acf122576d"
+[0m05:06:35.002526 [debug] [Thread-1 (]: Using postgres connection "test.energie.not_null_stg_eco2mix_consommation_mw.acf122576d"
+[0m05:06:35.003109 [debug] [Thread-1 (]: On test.energie.not_null_stg_eco2mix_consommation_mw.acf122576d: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "energie", "target_name": "dev", "node_id": "test.energie.not_null_stg_eco2mix_consommation_mw.acf122576d"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select consommation_mw
+from "energie"."analytics"."stg_eco2mix"
+where consommation_mw is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:06:35.003655 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m05:06:35.034326 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.031 seconds
+[0m05:06:35.038831 [debug] [Thread-1 (]: On test.energie.not_null_stg_eco2mix_consommation_mw.acf122576d: ROLLBACK
+[0m05:06:35.040012 [debug] [Thread-1 (]: On test.energie.not_null_stg_eco2mix_consommation_mw.acf122576d: Close
+[0m05:06:35.041021 [info ] [Thread-1 (]: 1 of 3 PASS not_null_stg_eco2mix_consommation_mw ............................... [[32mPASS[0m in 0.09s]
+[0m05:06:35.042525 [debug] [Thread-1 (]: Finished running node test.energie.not_null_stg_eco2mix_consommation_mw.acf122576d
+[0m05:06:35.043426 [debug] [Thread-1 (]: Began running node test.energie.not_null_stg_eco2mix_date_heure_utc.1495337896
+[0m05:06:35.044199 [info ] [Thread-1 (]: 2 of 3 START test not_null_stg_eco2mix_date_heure_utc .......................... [RUN]
+[0m05:06:35.044985 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.energie.not_null_stg_eco2mix_consommation_mw.acf122576d, now test.energie.not_null_stg_eco2mix_date_heure_utc.1495337896)
+[0m05:06:35.045488 [debug] [Thread-1 (]: Began compiling node test.energie.not_null_stg_eco2mix_date_heure_utc.1495337896
+[0m05:06:35.054316 [debug] [Thread-1 (]: Writing injected SQL for node "test.energie.not_null_stg_eco2mix_date_heure_utc.1495337896"
+[0m05:06:35.055974 [debug] [Thread-1 (]: Began executing node test.energie.not_null_stg_eco2mix_date_heure_utc.1495337896
+[0m05:06:35.058764 [debug] [Thread-1 (]: Writing runtime sql for node "test.energie.not_null_stg_eco2mix_date_heure_utc.1495337896"
+[0m05:06:35.060459 [debug] [Thread-1 (]: Using postgres connection "test.energie.not_null_stg_eco2mix_date_heure_utc.1495337896"
+[0m05:06:35.061122 [debug] [Thread-1 (]: On test.energie.not_null_stg_eco2mix_date_heure_utc.1495337896: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "energie", "target_name": "dev", "node_id": "test.energie.not_null_stg_eco2mix_date_heure_utc.1495337896"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select date_heure_utc
+from "energie"."analytics"."stg_eco2mix"
+where date_heure_utc is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:06:35.061625 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m05:06:35.078707 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.017 seconds
+[0m05:06:35.080765 [debug] [Thread-1 (]: On test.energie.not_null_stg_eco2mix_date_heure_utc.1495337896: ROLLBACK
+[0m05:06:35.081824 [debug] [Thread-1 (]: On test.energie.not_null_stg_eco2mix_date_heure_utc.1495337896: Close
+[0m05:06:35.082616 [info ] [Thread-1 (]: 2 of 3 PASS not_null_stg_eco2mix_date_heure_utc ................................ [[32mPASS[0m in 0.04s]
+[0m05:06:35.083693 [debug] [Thread-1 (]: Finished running node test.energie.not_null_stg_eco2mix_date_heure_utc.1495337896
+[0m05:06:35.084294 [debug] [Thread-1 (]: Began running node test.energie.unique_stg_eco2mix_date_heure_utc.d02345aa98
+[0m05:06:35.084911 [info ] [Thread-1 (]: 3 of 3 START test unique_stg_eco2mix_date_heure_utc ............................ [RUN]
+[0m05:06:35.085659 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.energie.not_null_stg_eco2mix_date_heure_utc.1495337896, now test.energie.unique_stg_eco2mix_date_heure_utc.d02345aa98)
+[0m05:06:35.086162 [debug] [Thread-1 (]: Began compiling node test.energie.unique_stg_eco2mix_date_heure_utc.d02345aa98
+[0m05:06:35.098430 [debug] [Thread-1 (]: Writing injected SQL for node "test.energie.unique_stg_eco2mix_date_heure_utc.d02345aa98"
+[0m05:06:35.100347 [debug] [Thread-1 (]: Began executing node test.energie.unique_stg_eco2mix_date_heure_utc.d02345aa98
+[0m05:06:35.102421 [debug] [Thread-1 (]: Writing runtime sql for node "test.energie.unique_stg_eco2mix_date_heure_utc.d02345aa98"
+[0m05:06:35.103684 [debug] [Thread-1 (]: Using postgres connection "test.energie.unique_stg_eco2mix_date_heure_utc.d02345aa98"
+[0m05:06:35.104100 [debug] [Thread-1 (]: On test.energie.unique_stg_eco2mix_date_heure_utc.d02345aa98: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "energie", "target_name": "dev", "node_id": "test.energie.unique_stg_eco2mix_date_heure_utc.d02345aa98"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    date_heure_utc as unique_field,
+    count(*) as n_records
+
+from "energie"."analytics"."stg_eco2mix"
+where date_heure_utc is not null
+group by date_heure_utc
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:06:35.104631 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m05:06:35.121537 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.017 seconds
+[0m05:06:35.123435 [debug] [Thread-1 (]: On test.energie.unique_stg_eco2mix_date_heure_utc.d02345aa98: ROLLBACK
+[0m05:06:35.124766 [debug] [Thread-1 (]: On test.energie.unique_stg_eco2mix_date_heure_utc.d02345aa98: Close
+[0m05:06:35.125812 [info ] [Thread-1 (]: 3 of 3 PASS unique_stg_eco2mix_date_heure_utc .................................. [[32mPASS[0m in 0.04s]
+[0m05:06:35.126587 [debug] [Thread-1 (]: Finished running node test.energie.unique_stg_eco2mix_date_heure_utc.d02345aa98
+[0m05:06:35.127989 [debug] [MainThread]: On master: COMMIT
+[0m05:06:35.128389 [debug] [MainThread]: Using postgres connection "master"
+[0m05:06:35.128752 [debug] [MainThread]: On master: COMMIT
+[0m05:06:35.129079 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m05:06:35.142150 [debug] [MainThread]: SQL status: COMMIT in 0.013 seconds
+[0m05:06:35.142671 [debug] [MainThread]: On master: Close
+[0m05:06:35.143193 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m05:06:35.143489 [debug] [MainThread]: Connection 'list_energie_analytics' was properly closed.
+[0m05:06:35.143729 [debug] [MainThread]: Connection 'test.energie.unique_stg_eco2mix_date_heure_utc.d02345aa98' was properly closed.
+[0m05:06:35.144081 [info ] [MainThread]: 
+[0m05:06:35.144703 [info ] [MainThread]: Finished running 3 data tests in 0 hours 0 minutes and 0.38 seconds (0.38s).
+[0m05:06:35.146323 [debug] [MainThread]: Command end result
+[0m05:06:35.186024 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ROG\Documents\projet_daina\pipeline-energie-france-cld\dbt_energie\target\manifest.json
+[0m05:06:35.190642 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ROG\Documents\projet_daina\pipeline-energie-france-cld\dbt_energie\target\semantic_manifest.json
+[0m05:06:35.195151 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\ROG\Documents\projet_daina\pipeline-energie-france-cld\dbt_energie\target\osi_document.json
+[0m05:06:35.205111 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ROG\Documents\projet_daina\pipeline-energie-france-cld\dbt_energie\target\run_results.json
+[0m05:06:35.205617 [info ] [MainThread]: 
+[0m05:06:35.206178 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m05:06:35.206713 [info ] [MainThread]: 
+[0m05:06:35.207250 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=3
+[0m05:06:35.209236 [debug] [MainThread]: Command `dbt test` succeeded at 05:06:35.209099 after 1.46 seconds
+[0m05:06:35.209731 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022913B86BD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022913E8A410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022913E8A200>]}
+[0m05:06:35.210205 [debug] [MainThread]: Flushing usage events
+[0m05:06:35.916922 [debug] [MainThread]: An error was encountered while trying to flush usage events

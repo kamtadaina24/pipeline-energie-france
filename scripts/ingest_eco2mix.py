@@ -12,10 +12,10 @@ import time
 
 DATASET = "eco2mix-national-tr"
 URL = f"https://odre.opendatasoft.com/api/explore/v2.1/catalog/datasets/{DATASET}/records"
+LIGNES_PAR_JOUR = 24 * 60 // 15   # 96 : un quart d'heure = 15 min
 
 
-
-def fetch_city_day(jour):
+def fetch_day(jour):
     params = {
         "where": f"date_heure >= date'{jour}' AND date_heure < date'{jour + timedelta(days=1)}'",
         "order_by": "date_heure",
@@ -25,11 +25,18 @@ def fetch_city_day(jour):
     reponse.raise_for_status()
     donnees = reponse.json()
 
-    # Garde-fou : on refuse une reponse tronquee plutot que de la stocker en silence
-    if len(donnees["results"]) != donnees["total_count"]:
-        raise ValueError(
-            f"Reponse incomplete : {len(donnees['results'])} lignes recues sur {donnees['total_count']}"
-        )
+    # # Garde-fou : on refuse une reponse tronquee plutot que de la stocker en silence
+    # if len(donnees["results"]) != donnees["total_count"]:
+    #     raise ValueError(
+    #         f"Reponse incomplete : {len(donnees['results'])} lignes recues sur {donnees['total_count']}"
+    #     )
+    # return donnees
+    
+    nb = len(donnees["results"])
+    if nb != donnees["total_count"]:
+        raise ValueError(f"{jour} : reponse tronquee ({nb} lignes recues sur {donnees['total_count']})")
+    if nb != LIGNES_PAR_JOUR:
+        raise ValueError(f"{jour} : journee incomplete ({nb} lignes au lieu de {LIGNES_PAR_JOUR})")
     return donnees
 
 

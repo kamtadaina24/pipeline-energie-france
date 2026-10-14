@@ -10,3 +10,15 @@ models:
       - name: consommation_mw
         data_tests:
           - not_null
+
+  - name: stg_meteo
+    columns:
+      - name: ville
+        data_tests:
+          - not_null
+      - name: date_heure_utc
+        data_tests:
+          - not_null
+      - name: temperature_c
+        data_tests:
+          - not_null

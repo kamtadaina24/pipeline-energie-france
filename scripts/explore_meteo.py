@@ -5,8 +5,10 @@ r = requests.get(
     params={
         "latitude": 48.85,
         "longitude": 2.35,
-        "start_date": "2026-10-05",
-        "end_date": "2026-10-07",
+        # "start_date": "2026-10-05",
+        # "end_date": "2026-10-07",
+        "start_date": "2026-10-14",
+        "end_date": "2026-10-14",
         "hourly": "temperature_2m,wind_speed_10m,shortwave_radiation",
         "timezone": "UTC",
     },
@@ -21,3 +23,5 @@ print({k: len(v) for k, v in d["hourly"].items()})
 print({k: v.count(None) for k, v in d["hourly"].items()})
 print(f'd["hourly"]["time"][:5]: {d["hourly"]["time"][:5]}')
 print(f'd["latitude"]: {d["latitude"]}, d["longitude"]: {d["longitude"]}')
+print(d["hourly"]["time"][-3:])
+print(d["hourly"]["temperature_2m"][-3:])

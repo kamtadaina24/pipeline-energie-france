@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: mart_conso_meteo_horaire
+    columns:
+      - name: heure_utc
+        data_tests:
+          - unique
+          - not_null
+      - name: temperature_moy_c
+        data_tests:
+          - not_null

@@ -4,3 +4,4 @@ __pycache__/
 dbt_energie/target/
 dbt_energie/logs/
 dbt_energie/dbt_packages/
+logs/
